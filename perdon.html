@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perdón</title>
+    <style>
+        header {
+            padding: 30px 0;
+             text-align: center;
+             margin-bottom: 20px;
+            justify-content: space-between;
+            display: flex;
+        }
+        body {
+            background-image: url('img/fondo.jpg');
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            text-align: center;
+        }
+        .buttons {
+            margin-top: 20px;
+        }
+        .buttons button {
+            width: 300px; /* Aumenta el ancho */
+            height: 70px; /* Aumenta la altura */
+            padding: 15px; /* Aumenta el relleno */
+            font-size: 25px; /* Aumenta el tamaño de la fuente */
+            border-radius: 50px;
+            margin: 10px; /* Añade margen entre los botones */
+        }
+        #no {
+            position: absolute;
+        }
+        img {
+            width: 500px;
+            height: 500px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+            float: left; /* Alinea la imagen a la izquierda */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="img/fFany.jpeg" alt="Foto de el amor de mi vida">
+        </header>
+        <h1>¿Me perdonas?</h1>
+        <div class="buttons">
+            <button id="yes">Sí</button>
+            <button id="no">No</button>
+        </div>
+    </div>
+
+    <script>
+        const noButton = document.getElementById('no');
+        const yesButton = document.getElementById('yes');
+
+        noButton.addEventListener('mouseover', () => {
+            const x = Math.random() * (window.innerWidth - noButton.clientWidth);
+            const y = Math.random() * (window.innerHeight - noButton.clientHeight);
+            noButton.style.left = `${x}px`;
+            noButton.style.top = `${y}px`;
+        });
+
+        yesButton.addEventListener('click', () => {
+            alert('Te amo dientitos ♥');
+        });
+    </script>
+</body>
+</html>
